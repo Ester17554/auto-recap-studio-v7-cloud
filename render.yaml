@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: auto-recap-studio-v7
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: RECAP_DATA
+        value: /data/recap
+    healthCheckPath: /health
